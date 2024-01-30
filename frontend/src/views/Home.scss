@@ -14,10 +14,16 @@
   .logo {
     width: 100%;
     max-width: 700px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
 
   .grayscale-button {
-    filter: grayscale(100%);
+    margin-bottom: 40px;
+    font-family: 'Questrial';
+    background-color: #383838;
+  }
+
+  .grayscale-button:hover {
+    background-color: #4d4d4d;
   }
 }

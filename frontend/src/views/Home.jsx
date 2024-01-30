@@ -9,7 +9,7 @@ const Home = () => {
       <Container>
         <CssBaseline />
         {/* Your Logo Component or <img> tag */}
-        <img src="images/dark_quantop_large_logo.svg" alt="Quantop Logo" className="logo" />
+        <img src="images/dark_solid_quantop_large_logo.svg" alt="Quantop Logo" className="logo" />
 
         {/* Optional: Add margin or spacing */}
         <Grid container spacing={2} justifyContent="center">
