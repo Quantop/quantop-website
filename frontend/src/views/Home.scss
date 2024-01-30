@@ -4,4 +4,20 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url(https://papers.co/wallpaper/papers.co-mu40-mountain-fog-nature-dark-bw-gray-sky-view-35-3840x2160-4k-wallpaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .logo {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 80px;
+  }
+
+  .grayscale-button {
+    filter: grayscale(100%);
+  }
 }
