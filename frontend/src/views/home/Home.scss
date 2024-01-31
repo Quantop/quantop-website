@@ -20,10 +20,28 @@
   .grayscale-button {
     margin-bottom: 40px;
     font-family: 'Questrial';
-    background-color: #383838;
+    font-size: 15px;
+    background-color: #38383880;
+    outline: 1px solid #9c9c9c;
   }
 
   .grayscale-button:hover {
     background-color: #4d4d4d;
+  }
+
+  .nav-button {
+    margin: 0;
+
+    .nav-button-text {
+      font-family: 'Questrial';
+      color: whitesmoke;
+      font-style: normal;
+      font-variant: normal;
+    }
+  }
+
+  .vertical-divider {
+    background-color: #9c9c9c;
+    width: 1px;
   }
 }
