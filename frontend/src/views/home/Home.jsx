@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Container, CssBaseline, Grid, Divider, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
+import InfoModal from '../../components/home/InfoModal';
 import './Home.scss';
 
 const Home = () => {
+  const [aboutModalOpen, setAboutModalOpen] = useState(false);
+  const [teamModalOpen, setTeamModalOpen] = useState(false);
+  const [faqModalOpen, setFaqModalOpen] = useState(false);
+
+  const openAboutModal = () => setAboutModalOpen(true);
+  const openTeamModal = () => setTeamModalOpen(true);
+  const openFaqModal = () => setFaqModalOpen(true);
+
+  const closeModals = () => {
+    setAboutModalOpen(false);
+    setTeamModalOpen(false);
+    setFaqModalOpen(false);
+  };
+
   return (
     <div className="home">
       <Container>
@@ -20,7 +35,7 @@ const Home = () => {
           </Grid>
           <Grid container flexDirection="row" justifyContent="center" paddingLeft="12px">
             <Grid item>
-              <Button className='nav-button'>
+              <Button className='nav-button' onClick={openAboutModal}>
                 <Typography variant="body" className='nav-button-text'>
                   About
                 </Typography>
@@ -28,7 +43,7 @@ const Home = () => {
             </Grid>
             <Divider orientation="vertical" className='vertical-divider' flexItem />
             <Grid item>
-              <Button className='nav-button'>
+              <Button className='nav-button' onClick={openTeamModal}>
                 <Typography variant="body" className='nav-button-text'>
                   Team
                 </Typography>
@@ -36,7 +51,7 @@ const Home = () => {
             </Grid>
             <Divider orientation="vertical" className='vertical-divider' flexItem />
             <Grid item>
-              <Button className='nav-button'>
+              <Button className='nav-button' onClick={openFaqModal}>
                 <Typography variant="body" className='nav-button-text'>
                   FAQ
                 </Typography>
@@ -45,6 +60,9 @@ const Home = () => {
           </Grid>
         </Grid>
 
+        <InfoModal isOpen={aboutModalOpen} onClose={closeModals} title="About" content="About" />
+        <InfoModal isOpen={teamModalOpen} onClose={closeModals} title="Team" content="Team" />
+        <InfoModal isOpen={faqModalOpen} onClose={closeModals} title="FAQ" content="FAQ" />
       </Container>
     </div>
   );
