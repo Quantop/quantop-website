@@ -19,10 +19,23 @@
 
   .grayscale-button {
     margin-bottom: 40px;
-    font-family: 'Questrial';
-    font-size: 15px;
+    padding: 0;
     background-color: #38383880;
     outline: 1px solid #9c9c9c;
+
+    .grayscale-button-text {
+      padding: 6px 16px;
+      text-decoration: none;
+      font-family: 'Questrial';
+      font-size: 15px;
+      color: whitesmoke;
+      font-style: normal;
+      font-variant: normal;
+    }
+  }
+
+  .grayscale-button:disabled a {
+    color: #9c9c9c;
   }
 
   .grayscale-button:hover {
