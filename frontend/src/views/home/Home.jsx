@@ -12,11 +12,11 @@ const Home = () => {
 
         <Grid container spacing={2} justifyContent="center" alignItems="center" flexDirection="column">
           <Grid item width="100%">
-            <Link to="/dashboard">
-              <Button variant="contained" color="primary" className='grayscale-button'>
-                ENTER APP
-              </Button>
-            </Link>
+            <Button variant="contained" color="primary" className='grayscale-button' disabled>
+              <Typography className='grayscale-button-text' component={Link} to="/dashboard">
+                COMING SOON
+              </Typography>
+            </Button>
           </Grid>
           <Grid container flexDirection="row" justifyContent="center" paddingLeft="12px">
             <Grid item>
