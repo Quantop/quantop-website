@@ -2,7 +2,7 @@
   position: fixed;
   padding: 20px;
   max-width: 800px;
-  max-height: 300px;
+  max-height: 400px;
   width: 80%;
   height: 50%;
   top: 50%;
@@ -11,10 +11,39 @@
   background-color: rgba(23, 23, 23, 0.97);
   color: #9c9c9c;
 
+  @media (max-width: 768px) {
+    max-height: 800px;
+  }
+
   .modal-header {
     display: flex;
     margin-bottom: 20px;
     justify-content: space-between;
     align-items: center;
+
+    button {
+      padding: 0;
+      min-width: 0;
+    }
+  }
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  .user-icon-container {
+    height: 120px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    .user-icon {
+      height: 100%;
+      width: 100%;
+    }
   }
 }

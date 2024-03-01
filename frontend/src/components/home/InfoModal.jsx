@@ -13,7 +13,7 @@ const InfoModal = ({ isOpen, onClose, title, content }) => {
             <CloseIcon />
           </Button>
         </div>
-        <Typography variant="body1">{content}</Typography>
+        {content}
       </div>
     </Modal>
   );
